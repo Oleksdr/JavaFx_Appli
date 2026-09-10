@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1050.0" style="-fx-background-color: #FFFFFF; -fx-font-family: 'Segoe UI', Helvetica, Arial, sans-serif;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+
+      <HBox alignment="CENTER_LEFT" prefHeight="80.0" prefWidth="200.0" spacing="15.0" style="-fx-background-color: #fdebf0;">
+         <children>
+            <ImageView fitHeight="65.0" fitWidth="85.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Picture/LowRes_Gèr-TaCaisse.png" />
+               </image>
+            </ImageView>
+            <Label style="-fx-text-fill: #00B6D4;" text="Informations sur l'équipe">
+               <font>
+                  <Font name="System Bold" size="26.0" />
+               </font>
+            </Label>
+            <Region HBox.hgrow="ALWAYS" />
+            <Button fx:id="accueilButtonPageInfoEquipe" mnemonicParsing="false" onAction="#onAccueilButtonPageInfoEquipe" style="-fx-background-color: null; -fx-padding: 0;">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
+                     <image>
+                        <Image url="@Picture/home.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+         <padding>
+            <Insets bottom="15.0" left="40.0" right="40.0" top="15.0" />
+         </padding>
+      </HBox>
+
+      <HBox maxHeight="510.0" prefHeight="100.0" prefWidth="200.0" spacing="40.0" VBox.vgrow="ALWAYS">
+         <padding>
+            <Insets bottom="10.0" left="40.0" right="40.0" top="10.0" />
+         </padding>
+         <children>
+
+            <VBox maxWidth="300.0" prefHeight="200.0" prefWidth="100.0" spacing="50.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <VBox maxWidth="300.0" prefHeight="65.0" prefWidth="300.0" spacing="5.0">
+                     <children>
+                        <Label style="-fx-font-size: 16px; -fx-text-fill: #2C3E50; -fx-font-weight: bold;" text="Nom de l'équipe" />
+                        <TextField fx:id="nomEquipeFieldInfoEquipe" editable="false" focusTraversable="false" maxWidth="300.0" prefHeight="38.0" prefWidth="258.0" promptText="ex : Les Bests" style="-fx-background-color: #FAFAFA; -fx-border-color: #0bc5e3; -fx-border-radius: 5; -fx-background-radius: 5; -fx-padding: 8; -fx-prompt-text-fill: #A0AAB5;" VBox.vgrow="NEVER">
+                           <font><Font size="14.0" /></font>
+                        </TextField>
+                     </children>
+                  </VBox>
+                  <VBox layoutX="10.0" layoutY="10.0" maxWidth="300.0" prefHeight="65.0" prefWidth="300.0" spacing="5.0">
+                     <children>
+                        <Label style="-fx-font-size: 16px; -fx-text-fill: #2C3E50; -fx-font-weight: bold;" text="Thème de la caisse à savon" />
+                        <TextField fx:id="themeCaisseFieldInfoEquipe" editable="false" focusTraversable="false" maxWidth="300.0" prefHeight="38.0" prefWidth="258.0" promptText="ex : Les Dragons" style="-fx-background-color: #FAFAFA; -fx-border-color: #0bc5e3; -fx-border-radius: 5; -fx-background-radius: 5; -fx-padding: 8; -fx-prompt-text-fill: #A0AAB5;" VBox.vgrow="NEVER">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </TextField>
+                        <Label style="-fx-font-size: 16px; -fx-text-fill: #2C3E50; -fx-font-weight: bold;" text="Poids de la caisse à savon (en kg)" />
+                        <TextField fx:id="poidsCaisseFieldInfoEquipe" editable="false" focusTraversable="false" maxWidth="300.0" prefHeight="38.0" prefWidth="258.0" promptText="ex : 80" style="-fx-background-color: #FAFAFA; -fx-border-color: #0bc5e3; -fx-border-radius: 5; -fx-background-radius: 5; -fx-padding: 8; -fx-prompt-text-fill: #A0AAB5;" VBox.vgrow="NEVER">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </VBox>
+               </children>
+               <HBox.margin>
+                  <Insets right="20.0" />
+               </HBox.margin>
+            </VBox>
+            <HBox prefHeight="100.0" prefWidth="200.0" spacing="10.0" HBox.hgrow="ALWAYS">
+               <children>
+      
+                  <VBox prefHeight="200.0" prefWidth="100.0" spacing="12.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label style="-fx-font-size: 18px; -fx-text-fill: #2C3E50; -fx-font-weight: bold;" text="Liste des membres" />
+      
+                        <TableView fx:id="tableauMembresInfoEquipe" prefHeight="200.0" style="-fx-background-color: #F7FDFF; -fx-border-color: #0bc5e3; -fx-border-width: 1.5; -fx-border-radius: 4;" VBox.vgrow="ALWAYS">
+                           <columns>
+                              <TableColumn fx:id="columnNomEtPrenomInfoEquipe" prefWidth="100.0" text="Nom et prénom" />
+                           </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                     </children>
+                  </VBox>
+      
+                  <VBox prefHeight="200.0" prefWidth="100.0" spacing="12.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label style="-fx-font-size: 18px; -fx-text-fill: #2C3E50; -fx-font-weight: bold;" text="Liste des participations" />
+      
+                        <TableView fx:id="tableauParticipationInfoEquipe" prefHeight="200.0" style="-fx-background-color: #F7FDFF; -fx-border-color: #0bc5e3; -fx-border-width: 1.5; -fx-border-radius: 4;" VBox.vgrow="ALWAYS">
+                           <columns>
+                              <TableColumn fx:id="colmunNomCourseInfoEquipe" prefWidth="110.0" text="Nom de la course" />
+                           </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+      <Button mnemonicParsing="false" onAction="#onRetourButtonPageInfoEquipe" prefHeight="52.0" prefWidth="135.0" style="-fx-background-color: #00B6D4; -fx-text-fill: white; -fx-background-radius: 6; -fx-padding: 10 40 10 40; -fx-font-size: 15px; -fx-font-weight: bold; -fx-cursor: hand;" text="Retour">
+         <padding>
+            <Insets bottom="15.0" left="40.0" right="40.0" top="15.0" />
+         </padding>
+         <VBox.margin>
+            <Insets bottom="10.0" />
+         </VBox.margin>
+      </Button>
+   </children>
+</VBox>

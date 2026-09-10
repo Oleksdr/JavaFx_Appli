@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1050.0" style="-fx-background-color: #FFFFFF; -fx-font-family: 'Segoe UI', Helvetica, Arial, sans-serif;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+
+      <HBox alignment="CENTER_LEFT" prefHeight="80.0" prefWidth="200.0" spacing="15.0" style="-fx-background-color: #fdebf0;">
+         <children>
+            <ImageView fitHeight="65.0" fitWidth="85.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Picture/LowRes_Gèr-TaCaisse.png" />
+               </image>
+            </ImageView>
+            <Label style="-fx-border-radius: 5; -fx-text-fill: #0bc5e3;" text="Édition de l'équipe">
+               <font>
+                  <Font name="System Bold" size="26.0" />
+               </font>
+            </Label>
+            <Region HBox.hgrow="ALWAYS" />
+            <Button mnemonicParsing="false" onAction="#onAccueilButtonPageEquipe" style="-fx-background-color: null; -fx-padding: 0;">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
+                     <image>
+                        <Image url="@Picture/home.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets bottom="15.0" left="40.0" right="40.0" top="15.0" />
+         </padding>
+      </HBox>
+
+      <HBox prefHeight="100.0" prefWidth="200.0" spacing="40.0" VBox.vgrow="ALWAYS">
+         <padding>
+            <Insets bottom="10.0" left="50.0" right="50.0" top="20.0" />
+         </padding>
+         <children>
+
+            <VBox prefHeight="460.0" prefWidth="350.0" spacing="35.0" HBox.hgrow="ALWAYS">
+               <children>
+
+                  <VBox alignment="TOP_LEFT" spacing="15.0">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" spacing="25.0">
+                           <children>
+                              <Label fx:id="labelNomEquipe" prefWidth="150.0" style="-fx-font-weight: bold;" text="Nom de l'équipe*">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font></Label>
+                              <TextField fx:id="nomEquipeField" onKeyTyped="#actualiseConditionsCreerEquipe" prefWidth="260.0" promptText="ex : Les Bests" style="-fx-border-radius: 5; -fx-background-radius: 5; -fx-border-color: #0bc5e3;">
+                                 <font><Font size="14.0" /></font>
+                              </TextField>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+
+                  <VBox alignment="TOP_LEFT" spacing="20.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" spacing="15.0" style="-fx-padding: 0 0 5 0;">
+                           <children>
+                              <ImageView fitHeight="30.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true" />
+                              <Label style="-fx-font-size: 20px; -fx-text-fill: #2C3E50; -fx-font-weight: bold;" text="Informations sur la caisse à savon" />
+                           </children>
+                        </HBox>
+
+                        <HBox alignment="CENTER_LEFT" spacing="25.0">
+                           <children>
+                              <Label prefWidth="150.0" style="-fx-font-weight: bold;" text="Thème">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font></Label>
+                              <TextField fx:id="themeCaisseField" prefWidth="260.0" promptText="ex : Les Dragons" style="-fx-border-radius: 5; -fx-background-radius: 5; -fx-border-color: #0bc5e3;">
+                                 <font><Font size="14.0" /></font>
+                                 <padding>
+                                    <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                                 </padding>
+                              </TextField>
+                           </children>
+                        </HBox>
+
+                        <HBox alignment="CENTER_LEFT" spacing="25.0">
+                           <children>
+                              <Label prefWidth="150.0" style="-fx-font-weight: bold;" text="Poids (en kg)">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font></Label>
+                              <Spinner fx:id="poidsCaisseField" editable="true" prefWidth="260.0" style="-fx-border-radius: 5; background-radius: 5; -fx-border-color: #0bc5e3;">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </Spinner>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+
+                  <HBox alignment="CENTER_LEFT" spacing="8.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="20.0" prefWidth="20.0" style="-fx-background-color: #00B6D4; -fx-background-radius: 20; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-style: italic; -fx-font-size: 11px;" text="i" />
+                        <Label style="-fx-text-fill: #555555; -fx-font-size: 13px;" text="Les champs notés avec * sont obligatoires." />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+
+            <VBox prefHeight="200.0" prefWidth="100.0" spacing="20.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <VBox alignment="TOP_LEFT" prefHeight="460.0" prefWidth="436.0" spacing="20.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <Label style="-fx-font-weight: bold;" text="Ajouter des membres">
+                           <font>
+                              <Font size="22.0" />
+                           </font></Label>
+                        <VBox fx:id="listeMembresCreerEquipe">
+                           <children>
+
+                              <HBox alignment="CENTER_LEFT" prefHeight="35.0" prefWidth="400.0" spacing="10.0">
+                                 <children>
+                                    <Label fx:id="labelMembreEquipe" prefWidth="80.0" style="-fx-font-weight: bold;" text="Membre 1*">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField prefWidth="100.0" promptText="Nom" style="-fx-border-radius: 5; -fx-background-color: 5; -fx-border-color: #0bc5e3;">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField prefWidth="100.0" promptText="Prénom" style="-fx-border-radius: 5; -fx-background-color: 5; -fx-border-color: #0bc5e3;">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+
+                        <HBox alignment="CENTER" prefWidth="340.0" spacing="15.0" style="-fx-padding: 10 0 0 0;">
+                           <children>
+                              <Button maxHeight="28.0" maxWidth="218.0" minHeight="28.0" minWidth="180.0" mnemonicParsing="false" onAction="#onAjouterMembre" prefHeight="28.0" prefWidth="218.0" style="-fx-background-color: #00B6D4; -fx-background-radius: 20; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 14px; -fx-padding: 0; -fx-cursor: hand;" text="+ Ajouter un membre" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+
+      <HBox alignment="CENTER" prefHeight="80.0" style="-fx-padding: 0 0 10 0;">
+         <children>
+            <Button fx:id="sauvegarderEquipeButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSauvegarderEquipe" style="-fx-background-color: #00B6D4; -fx-text-fill: white; -fx-background-radius: 6; -fx-padding: 12 35 12 35; -fx-font-size: 16px; -fx-font-weight: bold; -fx-cursor: hand;" text="Sauvegarder" />
+         </children>
+      </HBox>
+   </children>
+</VBox>
