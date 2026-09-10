@@ -35,16 +35,6 @@ Seul les éléments du modèle doivent être conservés.
 Le squelette de code fourni suit le patron de conception MVC (Modèle, Vue Contrôleur) ainsi que représenté sur le diagramme de classe détaillé ci-après.
 Les composants principaux du patron sont regroupés dans les *packages* respectifs `genevent.modele`, `genevent.vue` et `genevent.controleur`.
 
-![Diagramme de classe détaillé](doc/imgs/diagramme-classe_détaillé.svg)
-
-Dans cette implémentation, le contrôleur est l'objet qui pilote l'exécution de l'application comme représenté sur le diagramme de séquence ci-dessous.
-
-![Diagramme de séquence général](doc/imgs/diagramme-séquence_général.svg)
-
-Le diagramme de séquence détaillant la création d'un évènement illustre plus en détail l'interaction entre les différents objets de l'application et l'échange des informations.
-
-![Diagramme de séquence «création d'un évènement»](doc/imgs/diagramme-séquence_création-évènement.svg)
-
 
 ### IHM
 
